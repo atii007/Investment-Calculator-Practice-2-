@@ -24,13 +24,13 @@ const Form = (props) => {
     setUserInput(initialUserInput);
   };
   const inputChangeHandler = (input, value) => {
-    setUserInput((prevInput) => {
-      return {
-        ...prevInput,
-        [input]: value,
-      };
-    });
-  };
+  setUserInput((prevInput) => {
+    return {
+      ...prevInput,
+      [input]: +value, 
+    };
+  });
+};
 
   return (
     <form onSubmit={FormSubmitHandler} className={classes.form}>
